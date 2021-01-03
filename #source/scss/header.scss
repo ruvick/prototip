@@ -1,0 +1,253 @@
+//====================================================================================================
+.header {
+	padding: 23px 0 23px 0;
+//<3й Диапазон max767.98>
+		@media (max-width: $md3+px) {
+		padding: 10px 0 13px 0;
+		position: fixed;
+ 		 z-index: 30000;
+  		width: 100%;
+  		background: #fff;
+	}
+}
+//====================================================================================================
+.d-flex {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+/*Блок Навигации*/
+.nav-menu {
+	justify-content: space-between;
+	-ms-align-items: center;
+	align-items: center;
+}
+/*Изображение Логотипа*/
+.block-logo-picture__image {
+//<2й Диапазон 767.98-991.98px>
+	@media (max-width: $md2+px) {
+	max-width: 68%;
+	}
+	//<3й Диапазон max767.98>
+		@media (max-width: $md3+px) {
+		max-width: 80%;
+	}
+}
+/*Текст Логотипа*/
+.block-logo__text {
+	padding-top: 11px;
+	padding-left: 5px;
+//<2й Диапазон 767.98-991.98px>
+	@media (max-width: $md2+px) {
+	/*padding-top: 9.5px;
+	padding-left: 0px;
+	margin-left: -14px;*/
+	display: none;
+	}
+//<3й Диапазон max767.98>
+		@media (max-width: $md3+px) {
+		display: none;
+	}
+}
+/*Шрифт Логотипа*/
+.block-logo__text a {
+	font-family: "moscowsansregular";
+	font-size: 42.57px;
+	line-height: 42.84px;
+	color: #313133;
+//<2й Диапазон 767.98-991.98px>
+	@media (max-width: $md2+px) {
+	font-size: 26px;
+	line-height: 26px;
+	}
+}
+/*Текст Логотипа малый*/
+.block-logo__item {
+	font-family: "moscowsansregular";
+	font-size: 6.43px;
+	line-height: 6.47px;
+	color: #313133;
+	display: block;
+}
+
+/*Блок Меню*/
+.menu-list {
+//<2й Диапазон 767.98-991.98px>
+	@media (max-width: $md2+px) {
+	margin-right: 12px;
+	}
+//<3й Диапазон max767.98>
+	@media (max-width: $md3+px) {
+	display: none;
+	}
+}
+/*Пункты Меню*/
+.menu-list__item {
+	margin-left: 50px;
+//<1й Диапазон 992-1342px>
+	@media (max-width: $md1+px) {
+	margin-left: 18px;
+	}
+//<2й Диапазон 767.98-991.98px>
+	@media (max-width: $md2+px) {
+	margin-left: 10px;
+	}
+}
+.menu-list__item:first-child {
+//<1й Диапазон 992-1342px>
+	@media (max-width: $md1+px) {
+	margin-left: 0;
+	}
+ //<3й Диапазон max767.98>
+@media (max-width: $md3+px) {
+	margin-left: 10px;
+	}
+}
+/*Шрифт Меню*/
+.menu-list__item a {
+	font-family: "MuseoSansCyrl100";
+	font-size: 16px;
+	color: #1A1818;
+//<1й Диапазон 992-1342px>
+	@media (max-width: $md1+px) {
+	font-size: 15px;
+	}
+//<2й Диапазон 767.98-991.98px>
+	@media (max-width: $md2+px) {
+	font-size: 14.5px;
+	}
+}
+/*Подсвечивание Пункта Меню*/
+.menu-list__item a:hover {
+	color: #009CDC;
+	border-bottom: 2px solid #009CDC;
+}
+.menu-list__item a:focus {
+	color: #009CDC;
+}
+
+.header .show-menu {
+	display: block;
+	position: fixed;
+	z-index: 5;
+	background: rgba(0,0,0,0.9);
+	/*background: grey;*/
+	/*opacity: 0.95;*/
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	padding: 15px 20px 35px 10px;
+	margin-top: 73px;
+	overflow: auto;
+   	transition: all 0.35s;
+}
+.header .show-menu li a {
+	font-size: 18px;
+	line-height: 35px;
+	color: #FFF;
+}
+/*Бургер Меню*/
+.nav-icon-5{
+  width: 35px;
+  height: 30px;
+  margin: 10px 10px;
+  position: relative;
+  z-index: 6;
+  cursor: pointer;
+  display: none;
+ //<3й Диапазон max767.98>
+@media (max-width: $md3+px) {
+	display: inline-block;
+	}
+}
+.nav-icon-5 span{
+  background-color:#009CDC;
+  position: absolute;
+  border-radius: 2px;
+  transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+  width:100%;
+  height: 4px;
+  transition-duration: 500ms
+}
+.nav-icon-5 span:nth-child(1){
+  top:0px;
+  left: 0px;
+}
+.nav-icon-5 span:nth-child(2){
+  top:13px;
+  left: 0px;
+  opacity:1;
+}
+.nav-icon-5 span:nth-child(3){
+  bottom:0px;
+  left: 0px;
+}
+.nav-icon-5:not(.open):hover span:nth-child(1){
+  /*transform: rotate(-3deg) scaleY(1.1);*/
+}
+.nav-icon-5:not(.open):hover span:nth-child(2){
+  /*transform: rotate(3deg) scaleY(1.1);*/
+}
+.nav-icon-5:not(.open):hover span:nth-child(3){
+  /*transform: rotate(-4deg) scaleY(1.1);*/
+}
+.nav-icon-5.open span:nth-child(1){
+  transform: rotate(45deg);
+  top: 13px;
+}
+.nav-icon-5.open span:nth-child(2){
+  opacity:0;
+}
+.nav-icon-5.open span:nth-child(3){
+  transform: rotate(-45deg);
+  top: 13px;
+}
+/*Контактный телефон*/
+.contact {
+	padding-top: 10px;
+}
+.contact__text a {
+	font-family: "MuseoSansCyrl500";
+	font-size: 24px;
+	line-height: 55px;
+	color: #009CDC;
+//<1й Диапазон 992-1342px>
+	@media (max-width: $md1+px) {
+	font-size: 18px;
+	line-height: 34.53px;
+	}
+//<2й Диапазон 767.98-991.98px>
+	@media (max-width: $md2+px) {
+	font-size: 12px;
+	line-height: 25px;
+	}
+//<3й Диапазон max767.98>
+	@media (max-width: $md3+px) {
+	font-size: 18px;
+	}
+}
+/*Social Icon*/
+.contact-img img {
+	margin-right: 8px;
+	max-width: 100%;
+	height: auto;
+//<2й Диапазон 767.98-991.98px>
+	@media (max-width: $md2+px) {
+	max-width: 15%;
+	}
+
+	//<3й Диапазон max767.98>
+		@media (max-width: $md3+px) {
+		display: none;
+	}
+}
+
+
+
+
+
+
+

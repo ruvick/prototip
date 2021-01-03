@@ -1,0 +1,75 @@
+/*footer {margin-top: auto;} footer прижат к низу*/
+.footer {
+	background: #5A5B5E;
+	max-width: 1920px;
+	margin: 0 auto;
+	padding: 30px 0 25px 0;
+	//<3й Диапазон max767.98>
+	@media (max-width: $md3+px) {
+	position: relative;
+	padding: 10px 0 10px 0;
+	}
+}
+//====================================================================================================
+/*Текст Логтипа*/
+.block-logo__text_footer a {
+	color: #FFF;
+}
+/*Текст Логтипа малый*/
+.block-logo__item_footer {
+	color: #FFF;
+}
+/*Меню*/
+.nav-min {
+	display: none;
+//<3й Диапазон max767.98>
+@media (max-width: $md3+px) {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	/*margin-left: auto;*/
+	}
+}
+/*Меню текст*/
+.menu-list__item_footer a {
+	color: #FFF;
+//<3й Диапазон max767.98>
+	@media (max-width: $md3+px) {
+	font-size: 14px;
+	line-height: 25px;
+	}
+}
+
+.footer .show-menu {
+	display: block;
+	position: absolute;
+	z-index: 5;
+	/*background: rgba(0,0,0,0.8);*/
+	background: grey;
+	left: 0;
+	bottom: 0px;
+	width: 100%;
+	padding: 15px 20px 35px 10px;
+}
+.footer .show-menu li a {
+	font-size: 18px;
+	line-height: 35px;
+	color: #FFF;
+}
+/*Контактный телефон*/
+.contact__text_footer a {
+	color: #FFF;
+//<3й Диапазон max767.98>
+	@media (max-width: $md3+px) {
+	display: none;
+}
+}
+.contact__text_footer a:hover {
+	color: #009CDC;
+}
+//====================================================================================================
+
+
+
